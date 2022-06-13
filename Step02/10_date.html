@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //오늘 날짜정보
+        var today = new Date();
+        document.write(today.toLocaleString(),"<br>"); //2022. 6. 13. 오전 11:08:09
+        document.write(today.getFullYear(),"<br>"); //2022
+        document.write(today.getMonth(),"<br>"); //5 (6월인데!)
+        document.write(today.getDate(),"<br>") //13
+        document.write(today.getDay(),"<br>") //1 (0 일요일 ~ 6 토요일)
+        //날짜 지정
+        var yday = new Date(2002,4,31);
+    
+        document.write(yday.toLocaleString(),"<br>"); //2002. 5. 31. 오전 12:00:00
+        document.write(yday.getFullYear(),"<br>"); //2022
+        document.write(yday.getMonth(),"<br>"); //4
+        document.write(yday.getDate(),"<br>") //31
+        document.write(yday.getDay(),"<br>") //5 (금요일)
+
+        var tday = new Date(2022,6,14);
+        var d = tday.getTime()-today.getTime(); //밀리초
+        // 밀리초 / 1000 = 초
+        // 밀리초 / (1000 * 60) = 분
+        // 밀리초 / (1000 * 60 * 60) = 시간
+        // 밀리초 / (1000 * 60 * 60 * 24) = 일 
+        document.write(d, "<br>");
+        document.write(d /(1000 * 60 * 60 * 24)); //일
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

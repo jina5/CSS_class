@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .a{color:skyblue}
+        .b{color:yellowgreen}
+        .c{color:orange}
+        .d{color:red}
+    </style>
+    <script>
+        while(true){
+        let n = Number(prompt('0이상의 미세먼지수치 입력하세요','0'));
+        if (n>=0)
+        break;}        
+        let grade='a';
+        if(n<=30)
+        document.write(`<p class='${grade}'>좋음</p>`);
+        else if(n<=80)
+        document.write(`<p class='b'>좋음</p>`);
+        else if(n<=150)
+        {grade='c';
+        document.write(`<p class='${grade}'>나쁨</p>`);}
+        else
+        {grade='d';
+        document.write(`<p class='${grade}'>매우나쁨</p>`);}
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

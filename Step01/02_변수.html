@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,21 +7,26 @@
     <title>변수</title>
     <script>
         // 자바스크립트는 통합 자료형
-        var n1;
-        n1 = 10;
-        n1 = 20;
-        document.write(n1,"<hr>");
-        console.log(n1);
-        //-------------------
+        var m=10;
+        document.write(m,"<br>");
+        var m=20;
+        document.write(m,"<hr>");
+        console.log(m);
+        let n=10;
+        document.write(n,"<br>");
+        const c = 10;
+        c=20;
+        //-------------------------
         var n2 = "Hello World";
-        n2 = 'Hello World';
+        n2='hello world'; //문자열 큰 따옴표, 작은 따옴표 관계없음
         document.write(n2,"<br>");
-        //---------------------
-        var n3 = 4*4*3.1415;
-        document.write(n3,"<br>");
-        //----------------------
-        var n4 = n1 < n3;
-        document.write(n4);
+        //------------------------- 자바스크립트는 한줄씩 읽어들이기 때문에 세미콜론(;) 안써도 된다.
+        var n3 = 4*4*3.1415
+        document.write(n3,"<br>")
+        //------------------------- 
+        var n4 = n1<n3; //true, false 저장
+        document.write(n4); 
+
     </script>
 </head>
 <body>

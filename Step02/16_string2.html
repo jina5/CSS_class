@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //index     01234567890
+        var str = "Hello World Test Korea Soccer Baseball";
+        //문자열 부분추출
+        //4번인덱스부터 10글자 추출
+        document.write(str.substr(4,10),"<br>") //o World Te
+        //4번인덱스부터 10번 인덱스 전까지 추출
+        document.write(str.substring(4,10),"<br>") //o Worl
+        //4번 인덱스부터 전부 추출
+        document.write(str.substr(4),"<br>") //o World Test Korea Soccer Baseball
+        document.write(str.substring(4),"<br>") //o World Test Korea Soccer Baseball
+
+        //대문자변환
+        document.write(str.toUpperCase(),"<br>"); //HELLO WORLD TEST KOREA SOCCER BASEBALL
+        document.write(str.toLowerCase(),"<br>"); //hello world test korea soccer baseball
+
+        //문자코드값
+        var str2 = '가나다';
+        document.write(str2.charCodeAt(0), "<br>"); //44032
+        document.write(str2.charCodeAt(1), "<br>"); //45208
+        document.write(String.fromCharCode(65), "<br>");
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

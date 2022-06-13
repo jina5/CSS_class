@@ -4,16 +4,16 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>관계연산자</title>
+    <title>Document</title>
     <script>
+        //자바스크립트라서 생기는 문제
         var n1 = 10;
         var n2 = "10";
-
-        document.write(n1 == n2,"<br>");
-        document.write(n1 != n2,"<br>");
-        document.write(n1 === n2,"<br>");//데이터와 데이터 타입까지 확인
-        document.write(n1 !== n2,"<br>");
-
+        document.write(n1==n2, "<br>"); //true (문자열, 숫자 구분x)
+        document.write(n1!=n2, "<br>"); //false
+        //데이터타입까지 같은지 확인
+        document.write(n1===n2,"<br>"); //false (데이터와 데이터타입 까지 확인)
+        document.write(n1!==n2,"<br>");
     </script>
 </head>
 <body>
