@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>event function</title>
+  <!-- <style>
+    #txt{
+      /* 애는 최초 지정 */
+      color: red; 
+    }
+  </style> -->
+  <script>
+    // 함수만든다고 알려주기 -> 함수 / 이름(변수명) ''-스트링쓸때 씀
+    function readText(){
+      var txt = document.getElementById('txt');
+      // 새로 지정할 css넣어서 적용됨
+      txt.style.color="blue";
+      console.log(txt.value, txt.id);
+    }
+  </script>
+</head>
+<body>
+  <!-- attribute: 최초의 실행값 property:실행후 바뀐값 시점에 따라 달라짐 -->
+  <!-- onkeyup은 키보드를 눌렀다가 뗀 순간이 적용됨 -->
+  
+  <input type="text" id="txt" onkeyup="readText()">
+  <!------ onclick-> 버튼을 눌렀을때 자바스크립트 실행 -->
+ <!-- <button onclick="readText()">실행</button>-->
+</body>
+</html>
