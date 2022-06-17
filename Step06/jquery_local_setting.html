@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery-3.6.0.js"></script>
+    <script>
+        $(function () {
+            alert('제이쿼리 로드 완료')
+        });
+        var people = [{ '이름' : '홍길동', '나이' : 27},{ '이름' : '김철수', '나이' : 20 }];
+        var person = { "이름" : "김영희" , "나이" : "30" };
+        document.write(JSON.stringify(people)); //[{"이름":"홍길동","나이":27},{"이름":"김철수","나이":20}]
+        people.push(person);
+        document.write(JSON.stringify(people)); //[{"이름":"홍길동","나이":27},{"이름":"김철수","나이":20},{"이름":"김영희","나이":"30"}]
+    </script>
+</head>
+<body>
+</body>
+</html>
