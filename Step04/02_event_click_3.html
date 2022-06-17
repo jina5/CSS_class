@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        window.onload = () => {
+            //구글로 이동하는 하이퍼 링크 선택해서 click이벤트설정
+            var google = document.querySelector('#google');
+            google.onclick = function (e) {
+                e.preventDefault(); //기존 태그에 적용된 이벤트 기능을 실행하지 않음
+            }
+            var naver = document.querySelector('#naver');
+            naver.onclick = () =>{
+            alert('네이버로 이동');
+            return false; //기존 태그에 적용된 이벤트 기능을 실행하지 않음
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <!--구글, 네이버로 이동하는 하이퍼링크 작성-->
+    <a href="https://www.google.com" id="google">구글로 이동</a><br>
+    <a href="https://www.naver.com" id="naver">네이버로 이동</a>
+</body>
+
+</html>

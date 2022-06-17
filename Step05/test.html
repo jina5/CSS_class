@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="class1 class2 class3"></div>
+
+    <script>
+        var test = document.querySelector(".class1");
+        document.write(test.classList); //class1 class2 class3
+        document.write(test.classList[0]); //class1
+        document.write(test.classList[1]); //class2
+        document.write(test.classList[2]); //class3
+        document.write(test.classList[3]); //undefined
+
+        document.write(test.classList.contains('class1')); //true
+        document.write(test.classList.contains('class4')); //false
+
+        test.classList.add('class1');
+        document.write(test.classList); //class1 class2 class3
+        test.classList.add('class4');
+        document.write(test.classList); //class1 class2 class3 class4
+
+        test.classList.remove('class4');
+        document.write(test.classList); //class1 class2 class3
+        
+        test.classList.replace('class1','classA');
+        document.write(test.classList); //classA class2 class3
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?
+appkey=1f1e2d6962f9498bf6314797f4bc37cd&libraries=services"></script>
+<script>
+    window.onload=()=>{
+        var mapContainer = document.getElementById('map'), 
+        mapOption = { 
+        center: new kakao.maps.LatLng(33.450701, 126.570667), 
+        level: 3 
+    }; 
+    var map = new kakao.maps.Map(mapContainer, mapOption); 
+    //--------------------------------------------------------
+    var btn = document.querySelector('#btn');
+    btn.onclick = () =>{
+        var address = document.querySelector('#address');
+    //--------------------------------------------------------
+    var geocoder = new kakao.maps.services.Geocoder();
+
+var callback = function(result, status) {
+    if (status === kakao.maps.services.Status.OK) {
+        console.log(result);
+  //     document.querySelector('#json').innerHTML = JSON.stringify(result[0].address.b_code);
+      document.querySelector('#json').innerHTML = `${result[0].address.x},${result[0].address.y}`;
+
+      var coords = new kakao.maps.LatLng(result[0].address.y, result[0].address.x) //y부터...
+      map.setCenter(coords); //좌표로 이동
+
+      var marker = new kakao.maps.Marter({
+        map : map,
+        position : coords
+      });
+
+      var iwContent = `<div style="width:150px;text-align:center;padding:6px;">인포윈도우테스트</div>`;
+      var infoWindow = new kakao.maps.InfoWindow({
+        position : coords,
+        content : iwContent
+      })
+
+      infoWindow.open(map,marker);
+    }
+};
+
+geocoder.addressSearch(address.value, callback);    
+
+    }
+    }
+</script>
+</head>
+<body>
+    <input type="text" id="address"><button id="btn">이동</button>
+    <hr>
+    <!-- 지도를 표시할 div 입니다 -->
+    <div id="map" style="width:100%;height:350px;"></div>
+    <div id="json"></div>
+</body>
+</html>
