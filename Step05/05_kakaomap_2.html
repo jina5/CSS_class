@@ -31,7 +31,7 @@ var callback = function(result, status) {
       var coords = new kakao.maps.LatLng(result[0].address.y, result[0].address.x) //y부터...
       map.setCenter(coords); //좌표로 이동
 
-      var marker = new kakao.maps.Marter({
+      var marker = new kakao.maps.Marker({
         map : map,
         position : coords
       });
