@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        $(function(){
+            console.log($('p').attr('class')); //size underline
+            $('p').addClass('bold');
+            $('p').addClass('bold');
+            console.log($('p').attr('class')); //size underline bold
+            $('p').removeClass('underline');
+            $('p').toggleClass('underline');
+            $('p').toggleClass('underline');
+            console.log($('p').hasClass('bold')); //true
+            console.log($('p').hasClass('underline')); //false
+            $('p').toggleClass('underline');
+        });
+    </script>
+    <style>
+        .bold{
+            font-weight: bold;
+        }
+        .size{
+            font-size: 20px;
+        }
+        .underline{
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <p class="size underline">내용</p>
+</body>
+</html>
