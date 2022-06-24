@@ -1,25 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script>
-        $(function(){
-            console.log($('p').attr('class')); //size underline
-            $('p').addClass('bold');
-            $('p').addClass('bold');
-            console.log($('p').attr('class')); //size underline bold
-            $('p').removeClass('underline');
-            $('p').toggleClass('underline');
-            $('p').toggleClass('underline');
-            console.log($('p').hasClass('bold')); //true
-            console.log($('p').hasClass('underline')); //false
-            $('p').toggleClass('underline');
-        });
-    </script>
+    <title>jQuery</title>
     <style>
         .bold{
             font-weight: bold;
@@ -31,6 +16,22 @@
             text-decoration: underline;
         }
     </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        $(function(){
+            //현재 적용된 클래스를 조회
+            console.log($('p').attr('class'));
+            //선택된 요소에 클래스를 추가
+            $('p').addClass('bold');
+            $('p').addClass('bold');//중복 추가는 안됨
+            console.log($('p').attr('class'));
+            $('p').removeClass('underline');
+            $('p').toggleClass('underline');
+            $('p').toggleClass('underline');
+            console.log($("p").hasClass("bold"));
+            console.log($("p").hasClass("underline"));
+        });
+    </script>
 </head>
 <body>
     <p class="size underline">내용</p>
